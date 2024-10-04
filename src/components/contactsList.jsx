@@ -1,9 +1,18 @@
+import ContactItem from "./contactItem";
 
-function ContactsList(props) {
-  console.log(props)
+function ContactsList({ contacts =[] }) {
   return (
-    <div>Contact List</div>
-  )
+    <div>
+      <h3>Contacts List</h3>
+      {contacts.length ?(
+         <ul>
+        {contacts.map((contact) => (
+          <ContactItem  key= {contact.id} data={contact}/>
+        ))}
+      </ul>) : (<p>No contacts yet!</p>)}
+     
+      </div>
+  );
 }
 
 export default ContactsList
