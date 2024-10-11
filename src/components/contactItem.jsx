@@ -1,13 +1,16 @@
+import styles from "./ContactItem.module.css"
+
+
 function contactItem({data:{id,name,lastName,email,phone},deleteHandler , 
 }) {
   return (
-    <li key={id}>
+    <li className={styles.item}>
     <p>{name} {lastName}</p>
-    <p>{email}</p>
-    <p>{phone}</p>
-    <button onClick={()=> deleteHandler(id)}></button>
-  </li>
+    <p><span>📩</span>{email}</p>
+    <p><span>📞</span>{phone}</p>
+    <button onClick={()=> deleteHandler(id)}><span>🗑️</span></button>
+    </li>
   )
 }
 
-export default contactItem
+export default contactItem;

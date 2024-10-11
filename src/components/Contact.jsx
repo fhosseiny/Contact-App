@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { v4 } from "uuid";
-import ContactsList from "./contactsList";
-import inputs from "../constants/inputs";
-import styles from "./contacts.madule.css";
+import ContactsList from "./ContactsList";
+import inputs from "../constants/inputs.js";
+import styles from "./Contacts.module.css";
 
 function Contacts() {
     const [contacts, setContacts] = useState([]);
@@ -66,4 +66,4 @@ function Contacts() {
   )
 }
 
-export default Contacts
+export default Contacts;
